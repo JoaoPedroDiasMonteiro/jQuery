@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $('document').ready(function () {
+
+            $('select').change(() => {
+                console.log($('select').val());
+            })
+
+            $('input').focusout(() => {
+                console.log($('input').val());
+                $('input').val('Zézinho')
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+
+
+    <p>Nome:</p>
+    <input type="text">
+    <p>Onde você nos encontrou?</p>
+    <select name="encontrou" id="">
+        <option value="google">Google</option>
+        <option value="radio">Radio</option>
+        <option value="jornais">Jornais</option>
+        <option value="outro">outro</option>
+    </select>
+
+
+</body>
+
+</html>
