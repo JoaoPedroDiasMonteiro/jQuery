@@ -15,12 +15,44 @@
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script>
 		$('document').ready(() => {
+
+			// browser
+			// onload
 			$('#onload').html('Página carregada')
+			// scroll
 			$(window).scroll(function () {
 				$('#scroll').html('Scroll adionado')
 			})
+			//resize
 			$(window).resize(function () {
 				$('#resize').html('Página redimensionada')
+			})
+
+			// mouse
+			// mouse down
+			$('#btn1').mousedown(() => {
+				$('#mouse div').css('background-color', 'blue')
+				$('#mouse span').html('mouse down')
+			})
+			// mouse up
+			$('#btn1').mouseup(() => {
+				$('#mouse div').css('background-color', 'green')
+				$('#mouse span').html('mouse up')
+			})
+			// click
+			$('#btn1').click(() => {
+				$('#mouse div').css('background-color', 'aqua')
+				$('#mouse span').html('mouse click')
+			})
+			// double click
+			$('#btn2').dblclick(() => {
+				$('#mouse div').css('background-color', 'yellow')
+				$('#mouse span').html('mouse double click')
+			})
+			//
+			$('#mouse div').mousemove((e) => {
+				$('#mouse div').css('background-color', 'black')
+				$('#mouse span').html('mouse move ' + e.offsetX + ' ' + e.offsetY)
 			})
 		})
 	</script>
@@ -39,12 +71,15 @@
 		<span>Resize Window: </span><span id="resize">?</span>
 		<hr />
 
-		<h3>Mouse</h3>
-		<button type="button">Clique aqui</button>
-		<button type="button">Clique aqui 2x</button>
-		<div style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
-		<span>Resultado do evento sobre a div</span>
-		<hr />
+		<div id="mouse">
+			<h3>Mouse</h3>
+			<button id="btn1" type="button">Clique aqui</button>
+			<button id="btn2" type="button">Clique aqui 2x</button>
+			<div style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
+			<span>Resultado do evento sobre a div</span>
+			<hr />
+		</div>
+
 
 		<h3>Teclado</h3>
 		<span>Nome:</span>
