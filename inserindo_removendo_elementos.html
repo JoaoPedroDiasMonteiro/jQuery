@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $('document').ready(function () {
+
+            // insere items DENTRO do elemento
+            $('#l1').prepend('<li> item 0 </li>') // no início
+            $('#l1').append('<li> item 6 </li>') // no final
+
+            // insere items FORA do elemento
+            $('#l2').before('<div>Item 0</div>') // no início
+            $('#l2').after('<div>Item 5</div>') // no final
+
+            // remover
+            $('#l1').html('SUBSTITUIDO') // substitui o conteúdo
+            $('#l2').remove() // apaga o elemento
+
+        })
+    </script>
+</head>
+
+<body>
+
+
+   <ul style="border: 3px solid black; display: inline-block; padding: 0px 15px;" id="l1">
+       <li class="item">item 1</li>
+       <li class="item">item 2</li>
+       <li class="item">item 3</li>
+       <li class="item">item 4</li>
+       <li class="item">item 5</li>
+   </ul>
+
+   <div style="border: 3px solid black; display: inline-block; padding: 0px 15px;" id="l2">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+   </div>
+
+   <hr>
+
+</body>
+
+</html>
