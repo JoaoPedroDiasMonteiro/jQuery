@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $('document').ready(() => {
+            //
+            $('#btn2').click(() => {
+                alert('asasa')
+            })
+            $('#btn1').click(() => {
+                $('#btn2').trigger('click')
+            })
+            //
+            $('div').hover(
+                e => $(e.target).toggleClass('red')
+            )
+        })
+    </script>
+</head>
+
+<body>
+    <button id="btn1">btn1</button>
+    <button id="btn2">btn2</button>
+
+    <div style="border: blueviolet 1px solid ; height: 20vh; width: 20vw;">
+
+    </div>
+</body>
+
+</html>
