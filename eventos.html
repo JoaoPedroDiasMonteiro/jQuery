@@ -73,11 +73,30 @@
 			})
 			// up
 			$('#teclado input').keyup((e) => {
-				if(e.key == 'Enter') {
+				if (e.key == 'Enter') {
 					let txt = $(e.target).val()
 					$('#teclado .a').html(txt)
 					$('#teclado input').val('')
 				}
+			})
+
+			// form
+			// focus
+			$('#form input').focus((e) => {
+				$(e.target).css('border','12px solid red')
+			})
+			// blur
+			$('#form input').blur((e) => {
+				$(e.target).css('border','12px solid green')
+			})
+			// change
+			$('#form select').change((e) => {
+				$(e.target).css('border','12px solid aqua')
+			})
+			// submit 
+			$('#form').submit((e) => {
+				e.preventDefault()
+				$(e.target).css('border','12px solid blue')
 			})
 		})
 	</script>
@@ -119,23 +138,26 @@
 		</div>
 
 
-		<h3>Formulário</h3>
-		<form>
-			<span>Nome:</span>
-			<input type="text" />
+		<div id="form">
+			<h3>Formulário</h3>
+			<form>
+				<span>Nome:</span>
+				<input class="a" type="text" />
 
-			<span>E-mail:</span>
-			<input type="text" />
+				<span>E-mail:</span>
+				<input type="text" />
 
-			<span>Motivo do contato:</span>
-			<select>
-				<option value="">-- Selecione --</option>
-				<option value="duvida">Dúvida</option>
-				<option value="sugestao">Sugestão</option>
-			</select>
+				<span>Motivo do contato:</span>
+				<select>
+					<option value="">-- Selecione --</option>
+					<option value="duvida">Dúvida</option>
+					<option value="sugestao">Sugestão</option>
+				</select>
 
-			<button type="button">Enviar</button>
-		</form>
+				<button type="submit">Enviar</button>
+			</form>
+		</div>
+
 	</div>
 </body>
 
