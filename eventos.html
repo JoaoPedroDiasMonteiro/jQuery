@@ -82,21 +82,21 @@
 
 			// form
 			// focus
-			$('#form input').focus((e) => {
-				$(e.target).css('border','12px solid red')
+			$('#form input, #form select, #form button ').focus((e) => {
+				$(e.target).css('border', '12px solid red')
 			})
 			// blur
-			$('#form input').blur((e) => {
-				$(e.target).css('border','12px solid green')
+			$('#form input, #form select, #form button').blur((e) => {
+				$(e.target).css('border', '12px solid green')
 			})
 			// change
 			$('#form select').change((e) => {
-				$(e.target).css('border','12px solid aqua')
+				$(e.target).css('border', '12px solid aqua')
 			})
 			// submit 
 			$('#form').submit((e) => {
 				e.preventDefault()
-				$(e.target).css('border','12px solid blue')
+				$(e.target).css('border', '12px solid blue')
 			})
 		})
 	</script>
