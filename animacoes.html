@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+    <style>
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+
+            $('button').click(() => {
+                $('div').animate({
+                    'width': '100px',
+                    'height': '100px',
+                    'margin': '74px',
+                    'background-color': 'blue',
+                }, {
+                    duration: 2000,
+                    start: () => {
+                        console.log('animação iniciada');
+                    },
+                    complete: () => {
+                        console.log('animação finalizada');
+                    },
+                })
+            })
+
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <button type="button">iniciar animação</button>
+    <div style="width: 180px; height: 180px; background-color: rosybrown; margin-top: 10px;"></div>
+
+</body>
+
+</html>
