@@ -49,11 +49,23 @@
 				$('#mouse div').css('background-color', 'yellow')
 				$('#mouse span').html('mouse double click')
 			})
-			//
+			// mouse move
 			$('#mouse div').mousemove((e) => {
 				$('#mouse div').css('background-color', 'black')
 				$('#mouse span').html('mouse move ' + e.offsetX + ' ' + e.offsetY)
 			})
+			// mouse enter
+			$('#mouse section').mouseenter((e) => {
+				$('#mouse section').css('background-color', 'azure')
+				$('#mouse p').html('mouse enter')
+			})
+			// mouse leave
+			$('#mouse section').mouseleave((e) => {
+				$('#mouse section').css('background-color', 'aquamarine')
+				$('#mouse p').html('mouse leave')
+			})
+			//
+			
 		})
 	</script>
 </head>
@@ -78,6 +90,11 @@
 			<div style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
 			<span>Resultado do evento sobre a div</span>
 			<hr />
+			<section
+				style="background-color: aquamarine; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px">
+			</section>
+			<p>Div: Externa</p>
+
 		</div>
 
 
