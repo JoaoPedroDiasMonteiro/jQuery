@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $('document').ready(() => {
+            // não aplica os efeitos aos novos elementos criados
+            $('input').focus((e) => {
+                $(e.target).css('background', 'red')
+            })
+            $('input').blur((e) => {
+                $(e.target).css('background', 'white')
+            })
+
+
+            // aplica os efeitos aos novos elementos criados
+            $('body').on('focus', 'input', (e) => {
+                $(e.target).css('background', 'green')
+            })
+            $('body').on('blur', 'input', (e) => {
+                $(e.target).css('background', 'white')
+            })
+            // remove
+            $('body').off('blur', 'input')
+
+            $('body').append('<br> <br> <input type="text" name="" id="">')
+            $('body').append('<br> <br> <input type="text" name="" id="">')
+            $('body').append('<br> <br> <input type="text" name="" id="">')
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <input type="text" name="" id="">
+
+</body>
+
+</html>
