@@ -64,8 +64,21 @@
 				$('#mouse section').css('background-color', 'aquamarine')
 				$('#mouse p').html('mouse leave')
 			})
-			//
-			
+
+
+			//teclado
+			// down
+			$('#teclado input').keydown((e) => {
+				$('#teclado  .a').html('keydown ' + e.key)
+			})
+			// up
+			$('#teclado input').keyup((e) => {
+				if(e.key == 'Enter') {
+					let txt = $(e.target).val()
+					$('#teclado .a').html(txt)
+					$('#teclado input').val('')
+				}
+			})
 		})
 	</script>
 </head>
@@ -97,12 +110,14 @@
 
 		</div>
 
+		<div id="teclado">
+			<h3>Teclado</h3>
+			<span>Nome:</span>
+			<input type="text" />
+			<span class="a">Resultado do evento sobre o input</span>
+			<hr />
+		</div>
 
-		<h3>Teclado</h3>
-		<span>Nome:</span>
-		<input type="text" />
-		<span>Resultado do evento sobre o input</span>
-		<hr />
 
 		<h3>Formulário</h3>
 		<form>
